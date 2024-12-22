@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrinath Adhav</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .sec1{
+        height: 100vh;
+        padding-top: 200px;
+    }
+    .sec2{
+        height: 100vh;
+        background-color: #080808;
+    }
+    .sec3{
+        height: 100vh;
+        background-color: #080808;
+    }
+    body{
+        background-image: url("public/images/animated.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        background-attachment: fixed;
+    }
+</style>
+<body>
+    <header>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <a href="https://www.instagram.com/shrinath_adhav_45/"><img class="logo" src="./public/images/d.png" alt="No Logo"></a>
+                    
+                    <ul id="sidemenu">
+                        <li><a href="#head">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact Me</a></li>
+                        <i class="fas fa-times" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="sec1" id="head">
+        <div class="container">
+            <div id="s">
+                <img id="s1" src="./public/images/s3.jpg" alt="Not Available"></a>
+            </div>
+            
+            <div class="header-text">
+                <h3><b>Hello Friends</b></h3>
+                <h1>My Name is <span>Shrinath Adhav</span><br> I am a Front-end Developer <br>  From Nanded.</h1>
+            </div>
+        </div>
+</section>
+
+<section class="sec2" id="about">
+    <h1 class="sub-title">About Me</h1>
+    <div class="about">
+        <!-- <div class="about-col-1">
+            <img src="./public/images/s4.jpg" height="500px" width="500px" alt="">
+        </div> -->
+        <div class="about-col-2">
+            
+            <p class="para">Hello Friends, <br> I am Shrinath Shankar Adhav <br> and currently i am Persuing MCA(Master's of Computer Application) at APCOER, Pune</p>
+            <div>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Soft Skills</p>
+                    <p class="tab-links tab-link" onclick="opentab('tskills')">Technical Skills</p>
+                    <p class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+            </div>
+            <div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Hardworking Ability</span></li>
+                        <li><span>Communication</span></li>
+                        <li><span>Quick Learner</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="tskills">
+                    <ul>
+                        <li><span>Front-End <br> </span>HTML, CSS, JAVASCRIPT, & BOOTSTRAP</li>
+                        <li><span>Framework <br> </span>REACT JS</li>
+                        <li><span>Back-End <br> </span>PHP</li>
+                        <li><span>Database <br> </span>MySQL</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="hobbies">
+                    <ul>
+                        <li><span>Sports</span><br>I love playing Cricket as well as Badminton.</li>
+                        <li><span>Online Games</span><br>I love playing BGMI.</li>
+                        <li><span>Offline Games</span><br>I love playing Carrom and Chess.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2017-2018</span><br>I have completed my 10th from SVM Malegaon.<br>79.80</li>
+                        <li><span>2019-2020</span><br>I have completed my 12th from LMPJ College Malegaon.<br>65.54</li>
+                        <li><span>2020-2023</span><br>I have completed my B.SC. Degree in COmputer Science from Swami Ramanand Marathwada University Nanded<br>with 68.47</li>
+                        <li><span>2023-Ongoing</span><br>I Am currently Persuing My Master's Degree In Computer Science Which is MCA from<br> APCOER, Pune</li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+</section>
+
+
+<section class="sec3" id="contact">
+    <div class="contact" >
+        <div class="container" >
+            <div class="row">
+                <div class="contact-left" >
+                    <h1 class="sub-title1">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> shrinathadhav45@gmail.com</p>
+                    <p><i class="fa-brands fa-square-whatsapp"></i> 8459498907</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/adhav-shrinath-791134292/"><i class="fa-brands fa-linkedin"></i><span>Shrinath Adhav</span></a>
+                        <a href="https://www.instagram.com/accounts/login/?__coig_restricted=1"><i class="fa-brands fa-instagram"></i><span>shrinath_adhav_45</span></a>
+                    </div>
+                    <a href="./public/pdf/My Resume.pdf" download class="btn btn2">Download My CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <h1>Send Something!</h1>
+                        <input type="text" id="name" name="Name" class="name" placeholder="Name" required>
+                        <input type="email" id="email" name="Email" class="email" placeholder="Your Email" required>
+                        <textarea name="Message" id="textarea" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn3">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Shrinath, Made with <i class="fa-solid fa-heart"></i> by Shrinath_45</p>
+        </div>
+    </div>
+</contact>
+<script src="./src/index.js"></script>
+<script>
+
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname)
+      {
+          for(tablink of tablinks){
+              tablink.classList.remove("active-link");
+          }
+          for(tabcontent of tabcontents){
+              tabcontent.classList.remove("active-tab");
+          }
+          event.currentTarget.classList.add("active-link");
+          document.getElementById(tabname).classList.add("active-tab");
+
+      }
+
+</script>
+<script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxFFH510Y2ysOhrulLiyQSzXMtvnUCe5Ka8o38QOrVS0mm9kap-rYF1bvjWOtoFGFIjDw/exec';
+      const form = document.forms['submit-to-google-sheet'];
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+</script>
+</body>
+</html>
