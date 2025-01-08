@@ -5,135 +5,1055 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shrinath Adhav</title>
-    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="./src/style1.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <style>
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: aliceblue;
+    
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #1e8ac8;
+    border-radius: 10px;
+}
+.container1 {
+    display: grid;
+    grid-template-columns: 4fr 7fr;
+    gap: 100px;
+    padding-left: 70px;
+    padding-top: 100px;
+}
+#contact{
+    padding-top: 150px;
+}
+#s{
+    height: 450px;
+    width: 450px;
+    background-color: #080808;
+    padding: 10px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+}
+#s1{
+    height: 100%;
+    width: 100%;
+    /* background-color: #080808; */
+    border: 5px solid #ff004f;
+    position: relative;
+    border-radius: 50%;
+}
+
+.a{
+    width: 30%;
+    height: 80%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    top: 0;
+    z-index: 1000;
+    background-color: #ababab; 
+    position: sticky;
+  }
+
+ .logo {
+    width: 250px;
+    height: 150px;
+    margin-left: 1050px;
+    margin-top: 0px;
+    
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 25px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+
+}
+.header-text {
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+.header-text h1 {
+    font-size: 80px;
+}
+.header-text h3{
+    font-size: 50px;
+}
+
+.header-text h3 span {
+    color: #ff004f;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-left {
+    flex-basis: 45%;
+    margin-left: 50px;
+}
+
+.contact-right {
+    flex-basis: 50%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+    color: white;
+    font-size: 20px;
+
+}
+.contact-left p i {
+    color: #ff004f;
+    margin-right: 10px;
+    font-size: 20px;
+}
+.social-icons {
+    margin-top: 30px;
+}
+.social-icons a {
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 15px;
+    color: #ff004f;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.social-icons a span {
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 10px;
+    color: #ababab;
+}
+
+.social-icons a:hover {
+    color: rgb(12, 185, 21);
+    transform: translateY(-5px);
+}
+
+.btn {
+    display: flex;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 40px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: green;
+    transition: background 0.3s;
+}
+.contact-right form {
+    width: 100%;
+}
+.contact-right form h1{
+    color: #15d7a7;
+    text-align: center;
+    /* margin-left: -120px; */
+    padding-top: 20px;
+}
+
+form{
+    background-color: gray;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+    width: 80%;
+    border: 0;
+    outline: none;
+    background: white;
+    padding: 10px;
+    margin: 15px 0;
+    color: black;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn3 {
+    display: inline-block;
+    background: #ff004f;
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: aliceblue;
+    color: #080808;
+    font-weight: Bold;
+    
+}
+
+.copyright i {
+    color: #ff004f;
+}
+
+nav .fas {
+    display: none;
+}
     .sec1{
         height: 100vh;
-        padding-top: 200px;
+        padding-top: 100px;
     }
     .sec2{
         height: 100vh;
-        background-color: #080808;
+        padding-top: 200px;
     }
     .sec3{
         height: 100vh;
-        background-color: #080808;
     }
-    body{
-        background-image: url("public/images/animated.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
+    .custom-navbar {
+        padding: 0.3rem 1rem; /* Reduce padding for the navbar */
+    }
+    .custom-navbar .nav-link {
+        padding: 0.2rem 0.5rem; /* Reduce padding for links */
+    }
+    .custom-navbar img {
+        height: 10px; /* Adjust the logo height */
+    }
+    .card1 img{
+        height: 200px;
+        width: 100%;
+        border-radius: 5px;
+        border-bottom: 2px solid gray;
+        
+    }
+    
+    .card1{
+        height: 250px;
+        width: 250px;
+        margin-top: 20px;
+        text-align: center;
+        border: 2px solid gray;
+        margin-right: 20px;
+        border-radius: 10px;
+    }
+    #project{
         height: 100vh;
-        background-attachment: fixed;
+        padding: 20px;
+        
     }
+    .card2{
+        width: 700px;
+        height: 560px;
+        border: 2px solid black;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+    }
+    .project{
+        display: flex;
+        padding: 20px;
+        gap: 30px;
+    }
+    .card2 img{
+        height: 300px;
+        width: 90%;
+    }
+    .h1{
+        font-size: 60px;
+        color: #ff004f;
+        font-weight: bold;
+    }
+    .h2{
+        padding-top: 100px;
+        font-size: 60px;
+        color: #ff004f;
+        font-weight: bold;
+    }
+
+
+
+    @media only screen and (max-width: 767px) {
+    .container1 {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 20px;
+        padding-left: 20px;
+        padding-top: 50px;
+        height: 100vh;
+    }
+
+    .logo {
+        width: 150px;
+        height: 100px;
+        margin-left: 0; /* Center or adjust as needed */
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        display: block; /* Stack navigation items vertically */
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 20px; /* Adjust font size */
+    }
+
+    .header-text h1 {
+        font-size: 50px;
+    }
+
+    .header-text h3 {
+        font-size: 30px;
+    }
+
+    .row {
+        flex-direction: column; /* Stack rows vertically */
+        gap: 20px;
+    }
+    #about{
+        margin-top: 300px;
+        padding-left: 20px;
+    }
+    #skills{
+        margin-top: 300px;
+        height: auto;
+        
+    }
+   #skills .container-fluid{
+    display: flex;
+    flex-direction: column;
+   }
+   .card1 img{
+        height: 10px;
+        width: 100%;
+        border-radius: 5px;
+        border-bottom: 2px solid gray;
+        
+    }
+    
+    .card1{
+        height: auto;
+        width: 100vw;
+        margin-top: 0px;
+        text-align: center;
+        border: 2px solid gray;
+        /* margin-right: 20px; */
+        border-radius: 10px;
+    }
+
+    #project{
+        height: auto;
+        padding: 30px;
+        
+    }
+    .card2{
+        width: 100vw;
+        height: auto;
+        border: 2px solid black;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+    }
+    .project{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 30px;
+    }
+    .card2 img{
+        height: auto;
+        width: 100vw;
+        border-radius: 30px;
+    }
+
+    .contact-left div{
+        display: flex;
+        font-size: 10px;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .contact-right form {
+    width: 100%;
+}
+.contact-right form h1{
+    color: #15d7a7;
+    text-align: center;
+    /* margin-left: -120px; */
+    padding-top: 20px;
+}
+
+form{
+    background-color: gray;
+    border-radius: 20px;
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+    width: auto;
+    border: 0;
+    outline: none;
+    background: white;
+    padding: 10px;
+    margin: 15px 30px;
+    color: black;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn3 {
+    display: inline-block;
+    background: #ff004f;
+    padding: 14px 60px;
+    font-size: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.btn {
+    display: flex;
+    margin: 50px auto;
+    width: fit-content;
+    text-align: center;
+    border: 1px solid #ff004f;
+    padding: 14px 40px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: green;
+    transition: background 0.3s;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: aliceblue;
+    color: #080808;
+    font-weight: Bold;
+    
+}
+
+.copyright i {
+    color: #ff004f;
+}
+    .contact-left, .contact-right {
+        flex-basis: 100%; /* Full width for each */
+        margin-left: 0;
+    }
+
+    .btn {
+        width: 100%; /* Full width for buttons */
+        text-align: center;
+        color: black;
+        padding: 10px;
+    }
+
+    form input,
+    form textarea {
+        width: 100%; /* Full width for form elements */
+        font-size: 16px;
+    }
+
+    form .btn3 {
+        width: 100%; /* Full width for submit button */
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .card1, .card2 {
+        width: 100%; /* Full width for cards */
+        margin: 10px auto;
+    }
+
+    .card1 img, .card2 img {
+        width: 100%; /* Full width for images */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .h1, .h2 {
+        font-size: 40px; /* Adjust heading size */
+        text-align: center;
+    }
+
+    .social-icons {
+        text-align: center;
+    }
+
+    .social-icons a {
+        margin: 0 10px; /* Reduce spacing between icons */
+    }
+
+    .copyright {
+        font-size: 14px; /* Adjust text size */
+        padding: 10px 0;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1280px) {
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Times New Roman', Times, serif;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #f0f0f0;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #1e8ac8;
+        border-radius: 8px;
+    }
+
+    .container1 {
+        display: grid;
+        grid-template-columns: 2fr 6fr; /* Adjust column ratio */
+        gap: 40px;
+        padding-left: 50px;
+        padding-top: 80px;
+    }
+
+    #contact {
+        padding-top: 100px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #s {
+        height: 400px;
+        width: 400px;
+        background-color: #080808;
+        padding: 10px;
+        overflow: hidden;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    #s1 {
+        height: 100%;
+        width: 100%;
+        border: 5px solid #ff004f;
+        position: relative;
+        border-radius: 50%;
+    }
+    #about{
+        padding-left: 40px;
+    }
+
+    .a {
+        width: 30%;
+        height: 70%;
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+    }
+
+    header {
+        top: 0;
+        z-index: 1000;
+        background-color: #ababab;
+        position: sticky;
+    }
+
+    .logo {
+        width: 220px;
+        height: 140px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    nav ul li {
+        display: inline-block;
+        list-style: none;
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 24px;
+        position: relative;
+    }
+
+    nav ul li a::after {
+        content: '';
+        width: 0;
+        height: 3px;
+        background: #ff004f;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: 0.5s;
+    }
+
+    nav ul li a:hover::after {
+        width: 100%;
+    }
+
+    .header-text {
+        font-size: 28px;
+        color: black;
+        font-weight: bold;
+        font-family: Arial;
+    }
+
+    .header-text h1 {
+        font-size: 70px;
+    }
+
+    .header-text h3 {
+        font-size: 45px;
+    }
+
+    .header-text h3 span {
+        color: #ff004f;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .contact-left {
+        flex-basis: 40%;
+        margin-left: 30px;
+    }
+
+    .contact-right {
+        flex-basis: 55%;
+    }
+
+    .contact-left p {
+        margin-top: 20px;
+        color: white;
+        font-size: 18px;
+    }
+
+    .contact-left p i {
+        color: #ff004f;
+        margin-right: 10px;
+        font-size: 18px;
+    }
+
+    .social-icons {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .social-icons a {
+        text-decoration: none;
+        font-size: 24px;
+        margin-right: 15px;
+        color: #ff004f;
+        display: inline-block;
+        transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+        color: rgb(12, 185, 21);
+        transform: translateY(-5px);
+    }
+
+    .btn {
+        display: block;
+        margin: 40px auto;
+        width: fit-content;
+        border: 1px solid #ff004f;
+        padding: 14px 40px;
+        border-radius: 6px;
+        text-decoration: none;
+        color: green;
+        transition: background 0.3s;
+    }
+
+    .contact-right form {
+        width: 100%;
+    }
+
+    .contact-right form h1 {
+        color: #15d7a7;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    form {
+        background-color: gray;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        padding: 30px;
+    }
+
+    form input,
+    form textarea {
+        width: 85%;
+        border: 0;
+        outline: none;
+        background: white;
+        padding: 14px;
+        margin: 10px 0;
+        color: black;
+        font-size: 18px;
+        border-radius: 6px;
+    }
+
+    form .btn3 {
+        display: inline-block;
+        background: #ff004f;
+        padding: 14px 50px;
+        font-size: 18px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    .copyright {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        background: aliceblue;
+        color: #080808;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .copyright i {
+        color: #ff004f;
+    }
+
+    nav .fas {
+        display: none;
+    }
+
+    .sec1, .sec2, .sec3 {
+        height: 100vh;
+        padding-top: 100px;
+    }
+
+    .custom-navbar {
+        padding: 0.6rem 1.2rem;
+    }
+
+    .custom-navbar .nav-link {
+        padding: 0.5rem 1rem;
+    }
+
+    .custom-navbar img {
+        height: 20px;
+    }
+
+    .card1 img {
+        height: 200px;
+        width: 100%;
+        border-radius: 5px;
+        border-bottom: 2px solid gray;
+    }
+    .card1 h1{
+        font-size: 20px;
+    }
+
+    .card1 {
+        height: 250px;
+        width: 250px;
+        margin-top: 15px;
+        text-align: center;
+        border: 2px solid gray;
+        margin-right: 15px;
+        border-radius: 10px;
+    }
+
+    #project {
+        height: 100vh;
+        padding: 20px;
+    }
+
+    .card2 {
+        width: 650px;
+        height: 600px;
+        border: 2px solid black;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+
+    .card2 img {
+        height: 320px;
+        width: 100%;
+    }
+
+    .h1 {
+        font-size: 55px;
+        color: #ff004f;
+        font-weight: bold;
+    }
+
+    .h2 {
+        padding-top: 100px;
+        font-size: 55px;
+        color: #ff004f;
+        font-weight: bold;
+    }
+}
+
+
+    @media only screen and(min-width:1023px) and (max-width:1439px) {
+        /* For Laptop Devices */
+    }
+
+   
 </style>
 <body>
-    <header>
-        <div id="header">
-            <div class="container">
-                <nav>
-                    <a href="https://www.instagram.com/shrinath_adhav_45/"><img class="logo" src="./public/images/d.png" alt="No Logo"></a>
-                    
-                    <ul id="sidemenu">
-                        <li><a href="#head">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact Me</a></li>
-                        <i class="fas fa-times" onclick="closemenu()"></i>
+    <header class="h-50">
+        <nav class="navbar navbar-expand-lg text-light d-flex flex-wrap" style="padding: 0.5rem 1rem;">
+            <div class="container-fluid">
+                <a href="https://www.instagram.com/accounts/login/?__coig_restricted=1">
+                    <img class="w-10" src="./public/images/d.png" alt="Logo" style="height: 70px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-lg-auto">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link fs-5 fw-bold" aria-label="Navigate to Home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link fs-5 fw-bold" aria-label="Navigate to About Me">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#skills" class="nav-link fs-5 fw-bold" aria-label="Navigate to Skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#project" class="nav-link fs-5 fw-bold" aria-label="Navigate to Projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link fs-5 fw-bold" aria-label="Navigate to Contact Me">Contact</a>
+                        </li>
                     </ul>
-                    <i class="fas fa-bars" onclick="openmenu()"></i>
-                </nav>
+                </div>
             </div>
-        </div>
+        </nav>
+        
     </header>
-    <section class="sec1" id="head">
-        <div class="container">
+    <section class="sec1" id="home">
+        <div class="container1">
             <div id="s">
                 <img id="s1" src="./public/images/s3.jpg" alt="Not Available"></a>
             </div>
             
-            <div class="header-text">
-                <h3><b>Hello Friends</b></h3>
-                <h1>My Name is <span>Shrinath Adhav</span><br> I am a Front-end Developer <br>  From Nanded.</h1>
+            <div class="header-text pt-5">
+                <h3><b>Hello It's Me</b></h3>
+                <h1>Shrinath Adhav</h1>
+                <h3>And I'm a <span class="auto-type"></span></h3>
+                <p>A passionate Front-End Developer dedicated to creating visually appealing, responsive, and user-friendly websites.</p>
             </div>
         </div>
 </section>
 
-<section class="sec2" id="about">
-    <h1 class="sub-title">About Me</h1>
-    <div class="about">
-        <!-- <div class="about-col-1">
-            <img src="./public/images/s4.jpg" height="500px" width="500px" alt="">
-        </div> -->
-        <div class="about-col-2">
-            
-            <p class="para">Hello Friends, <br> I am Shrinath Shankar Adhav <br> and currently i am Persuing MCA(Master's of Computer Application) at APCOER, Pune</p>
-            <div>
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Soft Skills</p>
-                    <p class="tab-links tab-link" onclick="opentab('tskills')">Technical Skills</p>
-                    <p class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                </div>
-            </div>
-            <div>
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>Hardworking Ability</span></li>
-                        <li><span>Communication</span></li>
-                        <li><span>Quick Learner</span></li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="tskills">
-                    <ul>
-                        <li><span>Front-End <br> </span>HTML, CSS, JAVASCRIPT, & BOOTSTRAP</li>
-                        <li><span>Framework <br> </span>REACT JS</li>
-                        <li><span>Back-End <br> </span>PHP</li>
-                        <li><span>Database <br> </span>MySQL</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="hobbies">
-                    <ul>
-                        <li><span>Sports</span><br>I love playing Cricket as well as Badminton.</li>
-                        <li><span>Online Games</span><br>I love playing BGMI.</li>
-                        <li><span>Offline Games</span><br>I love playing Carrom and Chess.</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>2017-2018</span><br>I have completed my 10th from SVM Malegaon.<br>79.80</li>
-                        <li><span>2019-2020</span><br>I have completed my 12th from LMPJ College Malegaon.<br>65.54</li>
-                        <li><span>2020-2023</span><br>I have completed my B.SC. Degree in COmputer Science from Swami Ramanand Marathwada University Nanded<br>with 68.47</li>
-                        <li><span>2023-Ongoing</span><br>I Am currently Persuing My Master's Degree In Computer Science Which is MCA from<br> APCOER, Pune</li>
-                    </ul>
-                </div>
-            </div>
+<section class="sec2 p-lg-5 pt-5" id="about">
+    <h1 class="fw-bold text-center h2 pt-5">About Me</h1>
+    <div class="about d-flex flex-column">
+        <h5 class="fw-bold">Hi, I'm Shrinath Adhav, a passionate front-end developer with a strong foundation in web technologies. Currently, I'm in my second year of pursuing an MCA, where I'm enhancing my skills in software development and user-centric design. I enjoy crafting responsive and intuitive user interfaces and am always eager to learn new tools and technologies to deliver impactful digital experiences.</h5>
+
+        <div>
+            <h1 class=" pt-4 fw-bold text-success">Education:</h1>
+            <h4><span style="color: #ff004f; font-weight: bold;">Post Graduation:</span> I am currently pursuing <span class="fw-bold">Masters of Computer Application</span> from APCOER, Pune (2023-2025).</h4>
+            <h4><span style="color: #ff004f; font-weight: bold;">Under Graduation:</span> I have completed <span class="fw-bold">B.Sc.Computer Science</span> from MGM's College of CS & IT Nanded (2020-2023) with <span class="fw-bold">68.47%.</span></h4>
+            <h4><span style="color: #ff004f; font-weight: bold;">HSC:</span> I have completed <span class="fw-bold">HSC</span> from Late Munjaji Patil Junior College Malegaon (2019-2020) with <span class="fw-bold">65.54%.</span></h4>
+            <h4><span style="color: #ff004f; font-weight: bold;">SSC:</span> I have completed <span class="fw-bold">SSC</span> from Sarswati Madhyamik Vidhyalay Malegaon (2017-2018) with <span class="fw-bold">79.80% (Math: 97).</span></h4>
+        </div>
+        <div>
+            <h1 class=" pt-4 fw-bold text-success">Goal:</h1>
+            <p class="fw-bold fs-5">My short-term goal is to secure a job at the earliest opportunity to support my family and contribute financially. I aim to work alongside seasoned professionals, which will allow me to learn extensively and enhance my skills. This experience will be invaluable in my journey to grow both personally and professionally while taking on the responsibility of ensuring my family's well-being.</p>
+        </div>
     </div>
 </section>
 
+
+<section id="skills" class="pt-5">
+    <h1 class="fw-bold text-center h1 pt-5">Skills</h1>
+    <div class="container-fluid d-flex">
+        <div class="card1" style="width: 28rem;">
+            <img src="./public/images/html.webp" class="card-img-top" alt="">
+            <div class="card-body">
+                <h1 class="card-title fw-bold text-center">HTML</h1>
+            </div>
+        </div>
+        <div class="card1" style="width: 28rem;">
+            <img src="./public/images/css1.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+                <h1 class="card-title fw-bold text-center">CSS</h1>
+            </div>
+        </div>
+        <div class="card1" style="width: 28rem;">
+            <img src="./public/images/boot.png" class="card-img-top" alt="">
+            <div class="card-body">
+                <h1 class="card-title fw-bold text-center">Bootstrap</h1>
+            </div>
+        </div>
+        <div class="card1" style="width: 28rem;">
+            <img src="./public/images/js.png" class="card-img-top" alt="">
+            <div class="card-body">
+                <h1 class="card-title fw-bold text-center">JavaScript</h1>
+            </div>
+        </div>
+        <div class="card1" style="width: 28rem;">
+            <img src="./public/images/react.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+                <h1 class="card-title fw-bold text-center">React JS</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid p-3 d-flex">
+        <div class="card1" style="width: 28rem;">
+            <img src="./public/images/tail.webp" class="card-img-top" alt="">
+            <div class="card-body">
+                <h1 class="card-title fw-bold text-center">Tailwind CSS</h1>
+            </div>
+        </div>
+        <div class="card1" style="width: 28rem;">
+            <img src="./public/images/mysql.png" class="card-img-top" alt="">
+            <div class="card-body">
+                <h1 class="card-title fw-bold text-center">MySQL</h1>
+            </div>
+        </div>
+        <div class="card1" style="width: 28rem;">
+            <img src="./public/images/php.png" class="card-img-top" alt="">
+            <div class="card-body">
+                <h1 class="card-title fw-bold text-center">PHP</h1>
+            </div>
+        </div>
+        <div class="card1" style="width: 28rem;">
+            <img src="./public/images/git.webp" class="card-img-top" alt="">
+            <div class="card-body">
+                <h1 class="card-title fw-bold text-center">GitHub</h1>
+            </div>
+        </div>
+        <div class="card1" style="width: 28rem;">
+            <img src="./public/images/c.png" class="card-img-top" alt="">
+            <div class="card-body">
+                <h1 class="card-title fw-bold text-center">C Language</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="project" class="pt-5">
+    <h1 class="fw-bold text-center h1 pt-5">Projects</h1>
+    <div class="project">
+        <div class="card2">
+            <img src="./public/images/di.png" alt="">
+            <h1 class="text-center text-danger">Web Based Diagnostic Lab Management System</h1>
+            <p class="text-center">A Web-Based Diagnostic Lab Management System simplifies lab operations by focusing on key functionalities like appointment booking, tracking, retrieving test results, and sending feedback. Patients can easily book appointments online, track their test progress, and access their results conveniently through the system. Additionally, users can provide feedback, helping labs improve their services. This streamlined approach enhances patient convenience, reduces administrative workload, and ensures efficient service delivery.</p>
+        </div>
+    
+        <div class="card2">
+            <img src="./public/images/tours.png" alt="">
+            <h1 class="text-center text-danger">Tours & Travels Application</h1>
+            <p class="text-center">A Tours & Travels Application is a digital platform designed to simplify the planning and management of travel experiences. It allows users to explore various travel destinations, book transportation and accommodations, and create personalized itineraries. The application often provides features like destination guides, real-time updates, secure payment options, and customer reviews to enhance user confidence and convenience. By integrating advanced functionalities such as GPS navigation, weather forecasts, and package deals, the app ensures a seamless and enjoyable travel experience for users, making it a go-to tool for both frequent and occasional travelers.</p>
+        </div>
+    </div>
+</section>
 
 <section class="sec3" id="contact">
     <div class="contact" >
         <div class="container" >
             <div class="row">
                 <div class="contact-left" >
-                    <h1 class="sub-title1">Contact Me</h1>
-                    <p><i class="fa-solid fa-envelope"></i> shrinathadhav45@gmail.com</p>
-                    <p><i class="fa-brands fa-square-whatsapp"></i> 8459498907</p>
+                    <h1 class="fw-bold h1">Contact Me</h1>
+                    <p class="text-black"><i class="fa-solid fa-envelope"></i> shrinathadhav45@gmail.com</p>
+                    <p class="text-black"><i class="fa-brands fa-square-whatsapp"></i> 8459498907</p>
                     <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/adhav-shrinath-791134292/"><i class="fa-brands fa-linkedin"></i><span>Shrinath Adhav</span></a>
-                        <a href="https://www.instagram.com/accounts/login/?__coig_restricted=1"><i class="fa-brands fa-instagram"></i><span>shrinath_adhav_45</span></a>
+                        <a href="https://www.linkedin.com/in/adhav-shrinath-791134292/"><i class="fa-brands fa-linkedin"></i><span class="text-black">Shrinath Adhav</span></a>
+                        <a href="https://www.instagram.com/accounts/login/?__coig_restricted=1"><i class="fa-brands fa-instagram"></i><span class="text-black">shrinath_adhav_45</span></a>
+                        <a href="https://github.com/Shrinath45"><i class="bi bi-github"></i><span class="text-black">Shrinath45</span></a>
                     </div>
-                    <a href="./public/pdf/My Resume.pdf" download class="btn btn2">Download My CV</a>
+                    <a href="./public/pdf/Shrinath.pdf" download class="btn m-lg-5 dd fw-bold text-light text-center " style="background-color:#ff004f; text-align: center;">Download My CV</a>
                 </div>
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
-                        <h1>Send Something!</h1>
-                        <input type="text" id="name" name="Name" class="name" placeholder="Name" required>
-                        <input type="email" id="email" name="Email" class="email" placeholder="Your Email" required>
-                        <textarea name="Message" id="textarea" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn3">Submit</button>
+                        <h1 class="fw-bold text-center">Send Something!</h1>
+                        <input type="text" id="name" name="Name" class="name text-black" placeholder="Name" required>
+                        <input type="email" id="email" name="Email" class="email text-black" placeholder="Your Email" required>
+                        <textarea name="Message" class="text-black" id="textarea" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn3 w-50">Submit</button>
                     </form>
                 </div>
             </div>
@@ -143,26 +1063,11 @@
         </div>
     </div>
 </contact>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script src="./src/index.js"></script>
 <script>
 
-      var tablinks = document.getElementsByClassName("tab-links");
-      var tabcontents = document.getElementsByClassName("tab-contents");
-      function opentab(tabname)
-      {
-          for(tablink of tablinks){
-              tablink.classList.remove("active-link");
-          }
-          for(tabcontent of tabcontents){
-              tabcontent.classList.remove("active-tab");
-          }
-          event.currentTarget.classList.add("active-link");
-          document.getElementById(tabname).classList.add("active-tab");
-
-      }
-
-</script>
-<script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbxFFH510Y2ysOhrulLiyQSzXMtvnUCe5Ka8o38QOrVS0mm9kap-rYF1bvjWOtoFGFIjDw/exec';
       const form = document.forms['submit-to-google-sheet'];
     
@@ -172,6 +1077,15 @@
           .then(response => console.log('Success!', response))
           .catch(error => console.error('Error!', error.message))
       })
+
+      var typed = new Typed(".auto-type", {
+        strings: ["Frontend Developer", "Frontend Developer"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true
+        });
+
+
 </script>
 </body>
 </html>
